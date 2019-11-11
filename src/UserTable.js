@@ -6,7 +6,7 @@ function UserTable(props) {
         <div>
             <ul>
             {props.users.map((user) => {
-                return <li key={user.id}>{user.name} | <button>Edit</button> | <button onClick={() => props.deleteUser(user.id)}>Delete</button></li>
+                return <li key={user.id}>{user.name} | <button onClick={() => props.editUser(user.id)}>Edit</button> | <button onClick={() => props.deleteUser(user.id)}>Delete</button></li>
             })}
             </ul>
         </div>
