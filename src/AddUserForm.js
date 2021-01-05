@@ -12,7 +12,7 @@ function AddUserForm(props) {
 
     const submitForm = (e) => {
         e.preventDefault();
-        props.addUser(user);
+        props.addUser(user); // this is what calls the "parent" addUser function with the local "user" variable
         setUser(initialFormState);
     }
 

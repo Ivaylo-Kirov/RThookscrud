@@ -6,10 +6,11 @@ import {EditUserForm} from './EditUserForm';
 
 function App() {
   const usersData = []
-  const [users, setUsers] = useState(usersData);
+  const [users, setUsers] = useState(usersData); // this could have been defaulted with a blank array too, but variable is used later on again.
   const [currentEditingUser, setCurrentEditingUser] = useState({})
   const [editing, setEditing] = useState(false);
-  const addUser = (user) => {
+
+  const addUser = (user) => { // the variable in bracker here represents the object that "AddUserForm" returned
     user.id = users.length + 1;
     setUsers([...users, user]);
   }
