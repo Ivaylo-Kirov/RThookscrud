@@ -5,9 +5,9 @@ function AddUserForm(props) {
     const initialFormState = {id: null, name: ''};
     const [user, setUser] = useState(initialFormState);
 
-    const handleInputChange = (event) => {
+    const handleInputChange = (event) => { // this is the standard input field function that can be copy/pasted in other projects
         const {name, value} = event.target;
-        setUser({...user, [name]: value})
+        setUser({...user, [name]: value}) // dynamic property assignment - result is that first we spread through the object, then whichever value was changed in the event would be updated in the state. Another line that is essentially copy/paste for any project.
     }
 
     const submitForm = (e) => {
